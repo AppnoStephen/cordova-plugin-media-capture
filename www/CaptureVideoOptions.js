@@ -1,3 +1,4 @@
+cordova.define("cordova-plugin-media-capture.CaptureVideoOptions", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -29,6 +30,15 @@ var CaptureVideoOptions = function () {
     this.duration = 0;
     // Video quality parameter, 0 means low quality, suitable for MMS messages, and value 1 means high quality.
     this.quality = 1;
+    // Overlay images and settings that will go over the camera UI depending on camera orientation
+    this.portraitOverlay = '';
+    this.landscapeOverlay = '';
+    this.backgroundOverlayColor = '';
+    this.backgroundOverlayOpacity = 0;
+    this.backgroundOverlayAnimationDuration = 0.5;
+ 
 };
 
 module.exports = CaptureVideoOptions;
+
+});

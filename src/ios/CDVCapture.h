@@ -49,6 +49,15 @@ typedef NSUInteger CDVCaptureError;
 {
     CDVImagePicker* pickerController;
     BOOL inUse;
+    //APPNO, extra properties
+    BOOL isVideoPreviewShowing;
+    BOOL isCameraOverlayShowing;
+    UIImage* portraitOverlay;
+    UIImage* landscapeOverlay;
+    UIColor* overlayViewBackgroundColor;
+    NSNumber* overlayViewBackgroundAlpha;
+    Float32 overlayViewAnimationDuration;
+    
 }
 @property BOOL inUse;
 - (void)captureAudio:(CDVInvokedUrlCommand*)command;
